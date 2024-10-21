@@ -1,4 +1,4 @@
-package Account_Statement;
+package GUI;
 
 import java.awt.EventQueue;
 

@@ -1,4 +1,4 @@
-package Deposit;
+package GUI;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -7,7 +7,6 @@ import java.awt.Font;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
-import Bank_Interface.Home;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -64,9 +63,9 @@ public class Deposit extends JFrame {
         getContentPane().add(lblDeposit);
 
         // Potsdam Bank welcome label
-        JLabel lblNewLabel_4 = new JLabel("Welcome to Potsdam Bank");
+        JLabel lblNewLabel_4 = new JLabel("Welcome to PotsBank");
         lblNewLabel_4.setFont(new Font("Tahoma", Font.ITALIC, 30));
-        lblNewLabel_4.setBounds(249, 0, 361, 64);
+        lblNewLabel_4.setBounds(287, 0, 294, 64);
         getContentPane().add(lblNewLabel_4);
 
         // Scroll pane for table

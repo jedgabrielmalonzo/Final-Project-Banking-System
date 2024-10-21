@@ -1,17 +1,13 @@
-package Bank_Interface;
+package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
-import Account_Statement.Account_Statement;
-import Deposit.*;  // Import the Deposit class from the Deposit package
-import Withdraw.Withdraw;
-
-import java.awt.Font;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Home extends JFrame {
 
@@ -48,9 +44,9 @@ public class Home extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Welcome to Potsdam Bank");
+        JLabel lblNewLabel = new JLabel("Welcome to PotsBank");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
-        lblNewLabel.setBounds(225, 11, 406, 64);
+        lblNewLabel.setBounds(263, 11, 333, 64);
         getContentPane().add(lblNewLabel);
 
         JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");

@@ -1,102 +1,145 @@
-package Bank_Interface;
+package GUI;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import java.awt.BorderLayout;
+import javax.swing.*;
 import java.awt.Font;
-import javax.swing.JPanel;
 import java.awt.Color;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.util.HashMap;
 
 public class Signup {
 
-	private JFrame frame;
-	private JTextField textField;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
+    private JFrame frmSignup;
+    private JTextField textFieldUsername;
+    private JPasswordField passwordField;
+    private JPasswordField confirmPasswordField;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Signup window = new Signup();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+    // HashMap to store username and password (acting as a mock database)
+    private static HashMap<String, String> userDatabase = new HashMap<>();
 
-	/**
-	 * Create the application.
-	 */
-	public Signup() {
-		initialize();
-	}
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    Signup window = new Signup();
+                    window.frmSignup.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 628, 557);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Signup\r\n");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblNewLabel.setBounds(251, 11, 109, 80);
-		frame.getContentPane().add(lblNewLabel);
-		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(76, 198, 460, 280);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("Username");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1.setBounds(40, 35, 102, 25);
-		panel.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("Confirm Password");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_2.setBounds(40, 159, 183, 25);
-		panel.add(lblNewLabel_2);
-		
-		JLabel lblNewLabel_3 = new JLabel("Password");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_3.setBounds(40, 97, 102, 31);
-		panel.add(lblNewLabel_3);
-		
-		textField = new JTextField();
-		textField.setBounds(40, 66, 390, 20);
-		panel.add(textField);
-		textField.setColumns(10);
-		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(40, 128, 390, 20);
-		panel.add(passwordField);
-		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(40, 193, 390, 20);
-		panel.add(passwordField_1);
-		
-		JButton btnNewButton = new JButton("Enter");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton.setBounds(184, 235, 89, 23);
-		panel.add(btnNewButton);
-	}
-	 public void setVisible(boolean visible) {
-	        frame.setVisible(visible);
-	    }
+    /**
+     * Create the application.
+     */
+    public Signup() {
+        initialize();
+    }
 
+    /**
+     * Initialize the contents of the frame.
+     */
+    private void initialize() {
+        frmSignup = new JFrame();
+        frmSignup.setTitle("SIGNUP");
+        frmSignup.setBounds(100, 100, 628, 557);
+        frmSignup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmSignup.getContentPane().setLayout(null);
+
+        JLabel lblTitle = new JLabel("Signup");
+        lblTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
+        lblTitle.setBounds(252, 61, 109, 80);
+        frmSignup.getContentPane().add(lblTitle);
+
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setBounds(75, 145, 460, 350);
+        frmSignup.getContentPane().add(panel);
+        panel.setLayout(null);
+
+        JLabel lblUsername = new JLabel("User ID");
+        lblUsername.setBounds(40, 35, 102, 25);
+        lblUsername.setFont(new Font("Tahoma", Font.BOLD, 20));
+        panel.add(lblUsername);
+
+        textFieldUsername = new JTextField();
+        textFieldUsername.setBounds(40, 66, 390, 20);
+        panel.add(textFieldUsername);
+        textFieldUsername.setColumns(10);
+
+        JLabel lblPassword = new JLabel("Password");
+        lblPassword.setBounds(40, 97, 102, 31);
+        lblPassword.setFont(new Font("Tahoma", Font.BOLD, 20));
+        panel.add(lblPassword);
+
+        passwordField = new JPasswordField();
+        passwordField.setBounds(40, 128, 390, 20);
+        panel.add(passwordField);
+
+        JLabel lblConfirmPassword = new JLabel("Confirm Password");
+        lblConfirmPassword.setBounds(40, 159, 183, 25);
+        lblConfirmPassword.setFont(new Font("Tahoma", Font.BOLD, 20));
+        panel.add(lblConfirmPassword);
+
+        confirmPasswordField = new JPasswordField();
+        confirmPasswordField.setBounds(40, 193, 390, 20);
+        panel.add(confirmPasswordField);
+
+        JButton btnSubmit = new JButton("Submit");
+        btnSubmit.setBounds(186, 308, 89, 23);
+        btnSubmit.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = textFieldUsername.getText();
+                String password = new String(passwordField.getPassword());
+                String confirmPassword = new String(confirmPasswordField.getPassword());
+
+                // Basic validation
+                if (username.isEmpty() || password.isEmpty()) {
+                    JOptionPane.showMessageDialog(frmSignup, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                if (!password.equals(confirmPassword)) {
+                    JOptionPane.showMessageDialog(frmSignup, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                // Store username and password in the HashMap (simulating saving to a database)
+                userDatabase.put(username, password);
+
+                JOptionPane.showMessageDialog(frmSignup, "Account created successfully!");
+                
+                // Switch to Login window after successful signup
+                Login login = new Login(userDatabase);  // Pass the HashMap to Login
+                login.setVisible(true);
+                frmSignup.dispose();
+            }
+        });
+        btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        panel.add(btnSubmit);
+        
+        String[] accountTypes = {"Savings", "Checking", "Business", "Joint", "Fixed Deposit", "Retirement", "Student"};
+        JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
+        comboAccountType.setBounds(40, 239, 390, 31);
+        panel.add(comboAccountType);
+        
+        JLabel lblAccountType = new JLabel("Account Type");
+        lblAccountType.setBounds(40, 214, 137, 25);
+        lblAccountType.setFont(new Font("Tahoma", Font.BOLD, 20));
+        panel.add(lblAccountType);
+
+        JLabel lblWelcome = new JLabel("Welcome to PotsBank");
+        lblWelcome.setFont(new Font("Tahoma", Font.ITALIC, 30));
+        lblWelcome.setBounds(159, 11, 293, 64);
+        frmSignup.getContentPane().add(lblWelcome);
+    }
+
+    public void setVisible(boolean visible) {
+        frmSignup.setVisible(visible);
+    }
 }

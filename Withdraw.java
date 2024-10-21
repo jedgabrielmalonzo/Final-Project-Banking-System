@@ -1,4 +1,4 @@
-package Withdraw;
+package GUI;
 
 import java.awt.EventQueue;
 
@@ -9,9 +9,6 @@ import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
-import Bank_Interface.Home;
-
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -58,9 +55,9 @@ public class Withdraw {
 		frmWithdraw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWithdraw.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel_4 = new JLabel("Welcome to Potsdam Bank");
+		JLabel lblNewLabel_4 = new JLabel("Welcome to PotsBank");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.ITALIC, 30));
-		lblNewLabel_4.setBounds(249, 0, 361, 64);
+		lblNewLabel_4.setBounds(283, 0, 293, 64);
 		frmWithdraw.getContentPane().add(lblNewLabel_4);
 		
 		JLabel lblWithdraw = new JLabel("Withdraw");
