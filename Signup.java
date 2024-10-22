@@ -123,7 +123,7 @@ public class Signup {
         btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 15));
         panel.add(btnSubmit);
         
-        String[] accountTypes = {"Savings", "Checking", "Business", "Joint", "Fixed Deposit", "Retirement", "Student"};
+        String[] accountTypes = {"Savings", "Checking"};
         JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
         comboAccountType.setFont(new Font("Tahoma", Font.BOLD, 11));
         comboAccountType.setBounds(40, 259, 390, 31);
