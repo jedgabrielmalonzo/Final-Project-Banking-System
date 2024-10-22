@@ -51,7 +51,7 @@ public class Deposit extends JFrame {
      */
     private void initialize() {
         // Set the title, size, and close operation for the JFrame
-        setTitle("DEPOSIT");
+        setTitle("Deposit");
         setBounds(100, 100, 876, 540);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);

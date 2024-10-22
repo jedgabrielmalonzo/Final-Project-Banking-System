@@ -50,7 +50,7 @@ public class Withdraw {
 	 */
 	private void initialize() {
 		frmWithdraw = new JFrame();
-		frmWithdraw.setTitle("WITHDRAW");
+		frmWithdraw.setTitle("Withdraw");
 		frmWithdraw.setBounds(100, 100, 876, 540);
 		frmWithdraw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWithdraw.getContentPane().setLayout(null);

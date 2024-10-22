@@ -46,7 +46,7 @@ public class Login {
      */
     private void initialize() {
         frmLog = new JFrame();
-        frmLog.setTitle("LOGIN");
+        frmLog.setTitle("Login");
         frmLog.setBounds(100, 100, 628, 557);
         frmLog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmLog.getContentPane().setLayout(null);
@@ -87,10 +87,10 @@ public class Login {
                 String username = textField.getText();
                 String password = new String(passwordField.getPassword());
 
-                // Check if the username exists and the password matches
+              
                 if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
                     JOptionPane.showMessageDialog(frmLog, "Login successful!");
-                    // Proceed to the Home window
+                 
                     Home home = new Home();
                     home.setVisible(true);
                     frmLog.dispose();

@@ -43,7 +43,7 @@ public class Bank {
 	 */
 	private void initialize() {
 		frmWelcomeToPotsdam = new JFrame();
-		frmWelcomeToPotsdam.setTitle("WELCOME TO POTSDAM BANK\r\n");
+		frmWelcomeToPotsdam.setTitle("Welcome to PotsBank\r\n");
 		frmWelcomeToPotsdam.setBounds(100, 100, 876, 540);
 		frmWelcomeToPotsdam.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWelcomeToPotsdam.getContentPane().setLayout(null);

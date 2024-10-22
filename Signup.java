@@ -46,7 +46,7 @@ public class Signup {
      */
     private void initialize() {
         frmSignup = new JFrame();
-        frmSignup.setTitle("SIGNUP");
+        frmSignup.setTitle("Signup\r\n");
         frmSignup.setBounds(100, 100, 628, 557);
         frmSignup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmSignup.getContentPane().setLayout(null);
@@ -109,13 +109,13 @@ public class Signup {
                     return;
                 }
 
-                // Store username and password in the HashMap (simulating saving to a database)
+              
                 userDatabase.put(username, password);
 
                 JOptionPane.showMessageDialog(frmSignup, "Account created successfully!");
                 
-                // Switch to Login window after successful signup
-                Login login = new Login(userDatabase);  // Pass the HashMap to Login
+               
+                Login login = new Login(userDatabase);  
                 login.setVisible(true);
                 frmSignup.dispose();
             }
@@ -125,11 +125,12 @@ public class Signup {
         
         String[] accountTypes = {"Savings", "Checking", "Business", "Joint", "Fixed Deposit", "Retirement", "Student"};
         JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
-        comboAccountType.setBounds(40, 239, 390, 31);
+        comboAccountType.setFont(new Font("Tahoma", Font.BOLD, 11));
+        comboAccountType.setBounds(40, 259, 390, 31);
         panel.add(comboAccountType);
         
         JLabel lblAccountType = new JLabel("Account Type");
-        lblAccountType.setBounds(40, 214, 137, 25);
+        lblAccountType.setBounds(40, 223, 137, 25);
         lblAccountType.setFont(new Font("Tahoma", Font.BOLD, 20));
         panel.add(lblAccountType);
 

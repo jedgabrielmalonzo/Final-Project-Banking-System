@@ -39,7 +39,7 @@ public class Home extends JFrame {
      */
     private void initialize() {
         // Initialize this JFrame directly
-        setTitle("HOME");
+        setTitle("Home");
         setBounds(100, 100, 876, 540);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
