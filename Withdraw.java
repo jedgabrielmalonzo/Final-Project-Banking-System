@@ -1,4 +1,4 @@
-package GUI;
+package WithdrawGUI;
 
 import java.awt.EventQueue;
 
@@ -9,6 +9,9 @@ import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import GUI.Home;
+
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -19,7 +22,6 @@ import java.awt.event.ActionEvent;
 public class Withdraw {
 
 	private JFrame frmWithdraw;
-	private JTable table;
 	private JTextField textField;
 
 	/**
@@ -65,23 +67,9 @@ public class Withdraw {
 		lblWithdraw.setBounds(356, 39, 148, 80);
 		frmWithdraw.getContentPane().add(lblWithdraw);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(530, 130, 260, 340);
-		frmWithdraw.getContentPane().add(scrollPane);
-		
-		table = new JTable();
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Account Balance", "Date of Transaction"
-			}
-		));
-		scrollPane.setViewportView(table);
-		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(50, 280, 320, 140);
+		panel.setBounds(270, 180, 320, 140);
 		frmWithdraw.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -109,7 +97,7 @@ public class Withdraw {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnNewButton_1.setBounds(50, 133, 89, 23);
+		btnNewButton_1.setBounds(10, 11, 89, 23);
 		frmWithdraw.getContentPane().add(btnNewButton_1);
 	}
 }

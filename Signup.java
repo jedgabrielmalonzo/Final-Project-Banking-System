@@ -47,97 +47,115 @@ public class Signup {
     private void initialize() {
         frmSignup = new JFrame();
         frmSignup.setTitle("Signup\r\n");
-        frmSignup.setBounds(100, 100, 628, 557);
+        frmSignup.setBounds(100, 100, 705, 467);
         frmSignup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmSignup.getContentPane().setLayout(null);
 
-        JLabel lblTitle = new JLabel("Signup");
+        JLabel lblTitle = new JLabel("SIGNUP");
         lblTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
-        lblTitle.setBounds(252, 61, 109, 80);
+        lblTitle.setBounds(456, 24, 128, 80);
         frmSignup.getContentPane().add(lblTitle);
-
-        JPanel panel = new JPanel();
-        panel.setBackground(Color.LIGHT_GRAY);
-        panel.setBounds(75, 145, 460, 350);
-        frmSignup.getContentPane().add(panel);
-        panel.setLayout(null);
-
-        JLabel lblUsername = new JLabel("User ID");
-        lblUsername.setBounds(40, 35, 102, 25);
-        lblUsername.setFont(new Font("Tahoma", Font.BOLD, 20));
-        panel.add(lblUsername);
-
-        textFieldUsername = new JTextField();
-        textFieldUsername.setBounds(40, 66, 390, 20);
-        panel.add(textFieldUsername);
-        textFieldUsername.setColumns(10);
-
-        JLabel lblPassword = new JLabel("Password");
-        lblPassword.setBounds(40, 97, 102, 31);
-        lblPassword.setFont(new Font("Tahoma", Font.BOLD, 20));
-        panel.add(lblPassword);
-
-        passwordField = new JPasswordField();
-        passwordField.setBounds(40, 128, 390, 20);
-        panel.add(passwordField);
-
-        JLabel lblConfirmPassword = new JLabel("Confirm Password");
-        lblConfirmPassword.setBounds(40, 159, 183, 25);
-        lblConfirmPassword.setFont(new Font("Tahoma", Font.BOLD, 20));
-        panel.add(lblConfirmPassword);
-
-        confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(40, 193, 390, 20);
-        panel.add(confirmPasswordField);
-
-        JButton btnSubmit = new JButton("Submit");
-        btnSubmit.setBounds(186, 308, 89, 23);
-        btnSubmit.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String username = textFieldUsername.getText();
-                String password = new String(passwordField.getPassword());
-                String confirmPassword = new String(confirmPasswordField.getPassword());
-
-                // Basic validation
-                if (username.isEmpty() || password.isEmpty()) {
-                    JOptionPane.showMessageDialog(frmSignup, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-
-                if (!password.equals(confirmPassword)) {
-                    JOptionPane.showMessageDialog(frmSignup, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-
-              
-                userDatabase.put(username, password);
-
-                JOptionPane.showMessageDialog(frmSignup, "Account created successfully!");
-                
-               
-                Login login = new Login(userDatabase);  
-                login.setVisible(true);
-                frmSignup.dispose();
-            }
-        });
-        btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 15));
-        panel.add(btnSubmit);
         
         String[] accountTypes = {"Savings", "Checking"};
-        JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
-        comboAccountType.setFont(new Font("Tahoma", Font.BOLD, 11));
-        comboAccountType.setBounds(40, 259, 390, 31);
-        panel.add(comboAccountType);
         
-        JLabel lblAccountType = new JLabel("Account Type");
-        lblAccountType.setBounds(40, 223, 137, 25);
-        lblAccountType.setFont(new Font("Tahoma", Font.BOLD, 20));
-        panel.add(lblAccountType);
+                JLabel lblUsername = new JLabel("User ID");
+                lblUsername.setBounds(375, 99, 67, 25);
+                frmSignup.getContentPane().add(lblUsername);
+                lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
+                
+                        textFieldUsername = new JTextField();
+                        textFieldUsername.setBounds(375, 130, 268, 20);
+                        frmSignup.getContentPane().add(textFieldUsername);
+                        textFieldUsername.setColumns(10);
+                        
+                                passwordField = new JPasswordField();
+                                passwordField.setBounds(375, 190, 268, 20);
+                                frmSignup.getContentPane().add(passwordField);
+                                
+                                        confirmPasswordField = new JPasswordField();
+                                        confirmPasswordField.setBounds(375, 250, 268, 20);
+                                        frmSignup.getContentPane().add(confirmPasswordField);
+                                        
+                                                JLabel lblPassword = new JLabel("Password");
+                                                lblPassword.setBounds(375, 155, 89, 31);
+                                                frmSignup.getContentPane().add(lblPassword);
+                                                lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
+                                                
+                                                        JLabel lblConfirmPassword = new JLabel("Confirm Password");
+                                                        lblConfirmPassword.setBounds(375, 220, 159, 25);
+                                                        frmSignup.getContentPane().add(lblConfirmPassword);
+                                                        lblConfirmPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
+                                                        
+                                                        JLabel lblAccountType = new JLabel("Account Type");
+                                                        lblAccountType.setBounds(375, 275, 137, 25);
+                                                        frmSignup.getContentPane().add(lblAccountType);
+                                                        lblAccountType.setFont(new Font("Tahoma", Font.PLAIN, 20));
+                                                        JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
+                                                        comboAccountType.setBounds(375, 305, 268, 31);
+                                                        frmSignup.getContentPane().add(comboAccountType);
+                                                        comboAccountType.setFont(new Font("Tahoma", Font.BOLD, 11));
+                                                        
+                                                                JButton btnSubmit = new JButton("Signup");
+                                                                btnSubmit.setBounds(405, 351, 89, 23);
+                                                                frmSignup.getContentPane().add(btnSubmit);
+                                                                btnSubmit.addActionListener(new ActionListener() {
+                                                                    public void actionPerformed(ActionEvent e) {
+                                                                        String username = textFieldUsername.getText();
+                                                                        String password = new String(passwordField.getPassword());
+                                                                        String confirmPassword = new String(confirmPasswordField.getPassword());
 
-        JLabel lblWelcome = new JLabel("Welcome to PotsBank");
-        lblWelcome.setFont(new Font("Tahoma", Font.ITALIC, 30));
-        lblWelcome.setBounds(159, 11, 293, 64);
-        frmSignup.getContentPane().add(lblWelcome);
+                                                                        // Basic validation
+                                                                        if (username.isEmpty() || password.isEmpty()) {
+                                                                            JOptionPane.showMessageDialog(frmSignup, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                                                                            return;
+                                                                        }
+
+                                                                        if (!password.equals(confirmPassword)) {
+                                                                            JOptionPane.showMessageDialog(frmSignup, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
+                                                                            return;
+                                                                        }
+
+                                                                      
+                                                                        userDatabase.put(username, password);
+
+                                                                        JOptionPane.showMessageDialog(frmSignup, "Account created successfully!");
+                                                                        
+                                                                       
+                                                                        Login login = new Login(userDatabase);  
+                                                                        login.setVisible(true);
+                                                                        frmSignup.dispose();
+                                                                    }
+                                                                });
+                                                                btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 15));
+                                                                
+                                                                JPanel panel = new JPanel();
+                                                                panel.setLayout(null);
+                                                                panel.setBackground(Color.LIGHT_GRAY);
+                                                                panel.setBounds(0, 0, 312, 428);
+                                                                frmSignup.getContentPane().add(panel);
+                                                                
+                                                                JLabel lblWelcome_1 = new JLabel("Welcome to PotsBank");
+                                                                lblWelcome_1.setFont(new Font("Trebuchet MS", Font.PLAIN, 23));
+                                                                lblWelcome_1.setBounds(44, 200, 223, 31);
+                                                                panel.add(lblWelcome_1);
+                                                                
+                                                                JButton btnCancel = new JButton("Cancel\r\n");
+                                                                btnCancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+                                                                btnCancel.setBounds(521, 351, 89, 23);
+                                                                frmSignup.getContentPane().add(btnCancel);
+                                                                
+                                                                JLabel lblAlreadyHaveAn = new JLabel("Already have an account?");
+                                                                lblAlreadyHaveAn.setFont(new Font("Tahoma", Font.PLAIN, 12));
+                                                                lblAlreadyHaveAn.setBounds(390, 396, 147, 20);
+                                                                frmSignup.getContentPane().add(lblAlreadyHaveAn);
+                                                                
+                                                                JButton btnLogin = new JButton("Login");
+                                                                btnLogin.addActionListener(new ActionListener() {
+                                                                	public void actionPerformed(ActionEvent e) {
+                                                                	}
+                                                                });
+                                                                btnLogin.setBounds(535, 396, 89, 23);
+                                                                frmSignup.getContentPane().add(btnLogin);
     }
 
     public void setVisible(boolean visible) {

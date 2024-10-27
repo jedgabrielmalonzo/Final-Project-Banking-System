@@ -1,4 +1,4 @@
-package GUI;
+package DepositGUI;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -7,6 +7,9 @@ import java.awt.Font;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import GUI.Home;
+
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -15,8 +18,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Deposit extends JFrame {
-
-    private JTable table;
     private JPanel panel;
     private JTextField textField_1;
     private JLabel lblEnterTheAmount_1;
@@ -68,26 +69,11 @@ public class Deposit extends JFrame {
         lblNewLabel_4.setBounds(287, 0, 294, 64);
         getContentPane().add(lblNewLabel_4);
 
-        // Scroll pane for table
-        JScrollPane scrollPane = new JScrollPane();
-        scrollPane.setBounds(530, 130, 260, 340);
-        getContentPane().add(scrollPane);
-
-        // Create table for account balance and transaction date
-        table = new JTable();
-        table.setModel(new DefaultTableModel(
-            new Object[][] {},
-            new String[] {
-                "Account Balance", "Date of Transaction"
-            }
-        ));
-        scrollPane.setViewportView(table);
-
         // Panel for deposit functionality
         panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(Color.LIGHT_GRAY);
-        panel.setBounds(50, 280, 320, 140);
+        panel.setBounds(270, 180, 320, 140);
         getContentPane().add(panel);
 
         // TextField for deposit amount
@@ -118,7 +104,7 @@ public class Deposit extends JFrame {
             }
         });
         btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
-        btnNewButton_1.setBounds(50, 133, 89, 23);
+        btnNewButton_1.setBounds(10, 11, 89, 23);
         getContentPane().add(btnNewButton_1);
     }
 }

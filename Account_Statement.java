@@ -1,4 +1,4 @@
-package GUI;
+package CheckBalanceGUI;
 
 import java.awt.EventQueue;
 
@@ -9,6 +9,9 @@ import java.awt.Font;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
+
+import GUI.Home;
+
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
