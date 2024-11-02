@@ -1,31 +1,33 @@
-package ChangePinGui;
+package GUI;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JPasswordField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Change_Pin {
+public class PinChanger extends JFrame {
 
-	private JFrame frame;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
-	private JPasswordField passwordField_2;
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JLabel lblNewLabel_2;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Change_Pin window = new Change_Pin();
-					window.frame.setVisible(true);
+					PinChanger frame = new PinChanger();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -33,65 +35,66 @@ public class Change_Pin {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
-	public Change_Pin() {
-		initialize();
-	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 876, 540);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+	public PinChanger() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 883, 641);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		JLabel lblChangePin = new JLabel("Change Pin");
-		lblChangePin.setBounds(345, 13, 170, 37);
-		lblChangePin.setFont(new Font("Tahoma", Font.BOLD, 30));
-		frame.getContentPane().add(lblChangePin);
+		textField = new JTextField();
+		textField.setBounds(370, 202, 160, 38);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		
-		JLabel lblCurrentPin = new JLabel("Current Pin");
-		lblCurrentPin.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblCurrentPin.setBounds(234, 143, 106, 20);
-		frame.getContentPane().add(lblCurrentPin);
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(370, 289, 160, 38);
+		contentPane.add(textField_1);
 		
-		JLabel lblNewPin = new JLabel("New Pin");
-		lblNewPin.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewPin.setBounds(233, 202, 76, 16);
-		frame.getContentPane().add(lblNewPin);
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(370, 379, 160, 38);
+		contentPane.add(textField_2);
 		
-		JLabel label_1_1 = new JLabel("Confrim Pin");
-		label_1_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		label_1_1.setBounds(232, 257, 108, 20);
-		frame.getContentPane().add(label_1_1);
+		JLabel lblNewLabel = new JLabel("Change Pin");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNewLabel.setBounds(381, 78, 132, 60);
+		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Enter");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnNewButton.setBounds(385, 370, 89, 23);
-		frame.getContentPane().add(btnNewButton);
+		JLabel lblNewLabel_1 = new JLabel("Current Pin:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1.setBounds(240, 214, 120, 26);
+		contentPane.add(lblNewLabel_1);
 		
-		passwordField = new JPasswordField();
-		passwordField.setFont(new Font("Tahoma", Font.BOLD, 15));
-		passwordField.setBounds(232, 170, 387, 28);
-		frame.getContentPane().add(passwordField);
+		JLabel lblNewLabel_1_1 = new JLabel("New Pin:");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1.setBounds(266, 300, 94, 26);
+		contentPane.add(lblNewLabel_1_1);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setFont(new Font("Tahoma", Font.BOLD, 15));
-		passwordField_1.setBounds(233, 224, 387, 28);
-		frame.getContentPane().add(passwordField_1);
+		lblNewLabel_2 = new JLabel("Confirm Pin:");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_2.setBounds(240, 391, 120, 26);
+		contentPane.add(lblNewLabel_2);
 		
-		passwordField_2 = new JPasswordField();
-		passwordField_2.setFont(new Font("Tahoma", Font.BOLD, 15));
-		passwordField_2.setBounds(229, 288, 387, 28);
-		frame.getContentPane().add(passwordField_2);
+		JButton btnNewButton = new JButton("Update");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		btnNewButton.setBounds(391, 501, 119, 38);
+		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Home");
-		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnNewButton_1.setBounds(16, 11, 89, 23);
-		frame.getContentPane().add(btnNewButton_1);
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int reply = JOptionPane.showConfirmDialog(null, "Proceed to change the Pin?", "Confirm Update", JOptionPane.YES_NO_OPTION);
+				if (reply == JOptionPane.YES_OPTION) {
+					JOptionPane.showMessageDialog(null, "Pin updated successfully!");
+				} else {
+					JOptionPane.showMessageDialog(null, "Pin update canceled.");
+				}
+			}
+		});
 	}
 }
