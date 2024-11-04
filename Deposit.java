@@ -1,4 +1,5 @@
-package DepositGUI;
+package GUI;
+
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;

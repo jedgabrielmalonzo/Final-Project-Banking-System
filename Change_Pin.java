@@ -11,8 +11,10 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
+import javax.swing.UIManager;
 
-public class PinChanger extends JFrame {
+public class Change_Pin extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -20,13 +22,14 @@ public class PinChanger extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JLabel lblNewLabel_2;
+	private JLabel label;
 
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PinChanger frame = new PinChanger();
+					Change_Pin frame = new Change_Pin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,54 +39,66 @@ public class PinChanger extends JFrame {
 	}
 
 
-	public PinChanger() {
+	public Change_Pin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 883, 641);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(370, 202, 160, 38);
+		textField.setToolTipText("Enter Current Pin");
+		textField.setBounds(327, 223, 260, 38);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setToolTipText("Enter New Pin");
 		textField_1.setColumns(10);
-		textField_1.setBounds(370, 289, 160, 38);
+		textField_1.setBounds(327, 290, 260, 38);
 		contentPane.add(textField_1);
 		
 		textField_2 = new JTextField();
+		textField_2.setToolTipText("Confirm your pin");
 		textField_2.setColumns(10);
-		textField_2.setBounds(370, 379, 160, 38);
+		textField_2.setBounds(327, 360, 260, 38);
 		contentPane.add(textField_2);
 		
-		JLabel lblNewLabel = new JLabel("Change Pin");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblNewLabel.setBounds(381, 78, 132, 60);
+		JLabel lblNewLabel = new JLabel("CHANGE PIN*");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblNewLabel.setBounds(372, 77, 177, 60);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Current Pin:");
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1.setBounds(240, 214, 120, 26);
+		lblNewLabel_1.setBounds(197, 235, 120, 26);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("New Pin:");
+		lblNewLabel_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1.setBounds(266, 300, 94, 26);
+		lblNewLabel_1_1.setBounds(223, 301, 94, 26);
 		contentPane.add(lblNewLabel_1_1);
 		
-		lblNewLabel_2 = new JLabel("Confirm Pin:");
+		lblNewLabel_2 = new JLabel("Confirm new Pin:");
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_2.setBounds(240, 391, 120, 26);
+		lblNewLabel_2.setBounds(151, 372, 166, 26);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Update");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		btnNewButton.setBounds(391, 501, 119, 38);
 		contentPane.add(btnNewButton);
+		
+		label = new JLabel("New label");
+		label.setBounds(115, 435, 46, 14);
+		contentPane.add(label);
 		
 		
 		btnNewButton.addActionListener(new ActionListener() {
@@ -96,5 +111,14 @@ public class PinChanger extends JFrame {
 				}
 			}
 		});
+	}
+	
+	
+	private class TextUI extends BasicTextFieldUI{
+		
+		@Override
+		protected void paintBackground(Graphics grpghcs) {
+			
+		}
 	}
 }

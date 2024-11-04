@@ -1,4 +1,4 @@
-package WithdrawGUI;
+package GUI;
 
 import java.awt.EventQueue;
 

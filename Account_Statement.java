@@ -1,4 +1,4 @@
-package CheckBalanceGUI;
+package GUI;
 
 import java.awt.EventQueue;
 

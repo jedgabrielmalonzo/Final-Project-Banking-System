@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class ChangedSuccessefuly extends JFrame {
 
@@ -39,15 +41,26 @@ public class ChangedSuccessefuly extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Pin Changed Successfully");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblNewLabel.setBounds(333, 114, 335, 72);
-		contentPane.add(lblNewLabel);
-		
-		JButton btnNewButton = new JButton("Make Transaction?");
+		JButton btnNewButton = new JButton("Make Another\r\n Transaction?");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnNewButton.setBounds(392, 461, 213, 33);
+		btnNewButton.setBounds(318, 425, 295, 106);
 		contentPane.add(btnNewButton);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(214, 214, 214));
+		panel.setBounds(255, 38, 437, 316);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Pin Changed Successfully");
+		lblNewLabel.setBounds(62, 244, 320, 31);
+		panel.add(lblNewLabel);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(ChangedSuccessefuly.class.getResource("/GUI/Icon Group.png")));
+		lblNewLabel_1.setBounds(143, 81, 189, 119);
+		panel.add(lblNewLabel_1);
 		
 
 		btnNewButton.addActionListener(new ActionListener() {
