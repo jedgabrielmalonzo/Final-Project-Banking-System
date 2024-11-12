@@ -34,33 +34,38 @@ public class ChangedSuccessefuly extends JFrame {
 
 	public ChangedSuccessefuly() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1023, 713);
+		setBounds(100, 100, 915, 659);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(230, 245, 254));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Make Another\r\n Transaction?");
+		btnNewButton.setBackground(new Color(252, 183, 21));
+		btnNewButton.setBounds(304, 420, 295, 106);
+		btnNewButton.setForeground(new Color(0, 78, 168));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnNewButton.setBounds(318, 425, 295, 106);
 		contentPane.add(btnNewButton);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(214, 214, 214));
-		panel.setBounds(255, 38, 437, 316);
+		panel.setBounds(239, 42, 437, 316);
+		panel.setBackground(new Color(255, 255, 255));
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Pin Changed Successfully");
+		lblNewLabel.setForeground(new Color(0, 78, 168));
+		lblNewLabel.setBackground(new Color(0, 78, 168));
 		lblNewLabel.setBounds(62, 244, 320, 31);
 		panel.add(lblNewLabel);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(ChangedSuccessefuly.class.getResource("/GUI/Icon Group.png")));
-		lblNewLabel_1.setBounds(143, 81, 189, 119);
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setBounds(101, 11, 226, 231);
 		panel.add(lblNewLabel_1);
+		lblNewLabel_1.setIcon(new ImageIcon(ChangedSuccessefuly.class.getResource("/Images/Check.png")));
 		
 
 		btnNewButton.addActionListener(new ActionListener() {

@@ -46,12 +46,15 @@ public class Login {
      */
     private void initialize() {
         frmLog = new JFrame();
+        frmLog.getContentPane().setBackground(new Color(230, 245, 254));
         frmLog.setTitle("Login");
         frmLog.setBounds(100, 100, 705, 467);
         frmLog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmLog.getContentPane().setLayout(null);
 
         JLabel lblTitle = new JLabel("LOGIN");
+        lblTitle.setForeground(new Color(0, 78, 168));
+        lblTitle.setBackground(new Color(0, 78, 168));
         lblTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
         lblTitle.setBounds(462, 24, 102, 78);
         frmLog.getContentPane().add(lblTitle);
@@ -71,7 +74,8 @@ public class Login {
                                 frmLog.getContentPane().add(passwordField);
                                 
                                         JButton btnLogin = new JButton("Login");
-                                        btnLogin.setBounds(388, 274, 89, 23);
+                                        btnLogin.setBackground(new Color(252, 183, 21));
+                                        btnLogin.setBounds(388, 288, 89, 23);
                                         frmLog.getContentPane().add(btnLogin);
                                         btnLogin.addActionListener(new ActionListener() {
                                             public void actionPerformed(ActionEvent e) {
@@ -98,32 +102,38 @@ public class Login {
                                                 lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
                                                 
                                                 JLabel lblNewLabel = new JLabel("Don't have an account?");
+                                                lblNewLabel.setForeground(new Color(0, 128, 192));
+                                                lblNewLabel.setBackground(new Color(0, 128, 192));
                                                 lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
                                                 lblNewLabel.setBounds(382, 364, 133, 20);
                                                 frmLog.getContentPane().add(lblNewLabel);
                                                 
                                                 JButton btnNewButton = new JButton("Sign Up");
+                                                btnNewButton.setBackground(new Color(252, 183, 21));
                                                 btnNewButton.setBounds(525, 364, 89, 23);
                                                 frmLog.getContentPane().add(btnNewButton);
                                                 
                                                 JPanel panel = new JPanel();
-                                                panel.setBackground(Color.LIGHT_GRAY);
+                                                panel.setBackground(new Color(0, 78, 168));
                                                 panel.setBounds(0, 0, 312, 428);
                                                 frmLog.getContentPane().add(panel);
                                                         panel.setLayout(null);
                                                 
-                                                        JLabel lblWelcome = new JLabel("Welcome to Potsdam Bank");
-                                                        lblWelcome.setBounds(26, 199, 256, 31);
+                                                        JLabel lblWelcome = new JLabel("Welcome to PotsBank");
+                                                        lblWelcome.setForeground(new Color(255, 255, 255));
+                                                        lblWelcome.setBackground(new Color(255, 255, 255));
+                                                        lblWelcome.setBounds(46, 199, 256, 31);
                                                         panel.add(lblWelcome);
-                                                        lblWelcome.setFont(new Font("Times New Roman", Font.PLAIN, 23));
+                                                        lblWelcome.setFont(new Font("SansSerif", Font.PLAIN, 23));
                                                 
                                                 JButton btnCancel = new JButton("Cancel\r\n");
+                                                btnCancel.setBackground(new Color(252, 183, 21));
                                                 btnCancel.addActionListener(new ActionListener() {
                                                 	public void actionPerformed(ActionEvent e) {
                                                 	}
                                                 });
                                                 btnCancel.setFont(new Font("Tahoma", Font.BOLD, 15));
-                                                btnCancel.setBounds(525, 274, 89, 23);
+                                                btnCancel.setBounds(525, 288, 89, 23);
                                                 frmLog.getContentPane().add(btnCancel);
     }
 

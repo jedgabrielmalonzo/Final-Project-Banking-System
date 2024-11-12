@@ -40,6 +40,7 @@ public class Home extends JFrame {
      * Create the application.
      */
     public Home() {
+    	getContentPane().setBackground(new Color(230, 245, 254));
         initialize();
     }
 
@@ -55,6 +56,8 @@ public class Home extends JFrame {
 
         // "Deposit" button to open Deposit window
         JButton btnNewButton = new JButton("Deposit");
+        btnNewButton.setBackground(new Color(252, 183, 21));
+        btnNewButton.setForeground(new Color(0, 78, 168));
         btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
         btnNewButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
@@ -67,6 +70,8 @@ public class Home extends JFrame {
 
         // "Withdraw" button
         JButton btnNewButton_1 = new JButton("Withdraw");
+        btnNewButton_1.setBackground(new Color(252, 183, 21));
+        btnNewButton_1.setForeground(new Color(0, 78, 168));
         btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 15));
         btnNewButton_1.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
@@ -79,6 +84,8 @@ public class Home extends JFrame {
 
         // "Account Statement" button
         JButton btnAccountStatement = new JButton("Check Balance");
+        btnAccountStatement.setBackground(new Color(252, 183, 21));
+        btnAccountStatement.setForeground(new Color(0, 78, 168));
         btnAccountStatement.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
                 Account_Statement.main(new String[0]);  
@@ -90,7 +97,7 @@ public class Home extends JFrame {
         getContentPane().add(btnAccountStatement);
         
         JPanel panel = new JPanel();
-        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setBackground(new Color(0, 78, 168));
         panel.setBounds(0, 0, 345, 501);
         getContentPane().add(panel);
         panel.setLayout(null);
@@ -110,6 +117,8 @@ public class Home extends JFrame {
                 panel.add(lblNewLabel_2_1_1);
         
         JButton btnChangePin = new JButton("Change Pin");
+        btnChangePin.setBackground(new Color(252, 183, 21));
+        btnChangePin.setForeground(new Color(0, 78, 168));
         btnChangePin.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         	}
@@ -121,16 +130,18 @@ public class Home extends JFrame {
         JLabel lblNewLabel_2 = new JLabel("Welcome to PotsBank");
         lblNewLabel_2.setBounds(441, 26, 331, 37);
         getContentPane().add(lblNewLabel_2);
-        lblNewLabel_2.setForeground(Color.BLACK);
+        lblNewLabel_2.setForeground(new Color(0, 78, 168));
         lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
         
                 JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
                 lblNewLabel_1.setBounds(505, 62, 197, 35);
                 getContentPane().add(lblNewLabel_1);
-                lblNewLabel_1.setForeground(Color.BLACK);
+                lblNewLabel_1.setForeground(new Color(0, 78, 168));
                 lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 15));
                 
                 JButton btnCreateAccount = new JButton("Create Account");
+                btnCreateAccount.setBackground(new Color(252, 183, 21));
+                btnCreateAccount.setForeground(new Color(0, 78, 168));
                 btnCreateAccount.setFont(new Font("Tahoma", Font.BOLD, 15));
                 btnCreateAccount.setBounds(498, 417, 204, 54);
                 getContentPane().add(btnCreateAccount);

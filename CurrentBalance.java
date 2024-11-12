@@ -11,6 +11,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class CurrentBalance {
 
@@ -45,16 +46,20 @@ public class CurrentBalance {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(230, 245, 254));
 		frame.setBounds(100, 100, 876, 540);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblCurrentBalance = new JLabel("Current Balance");
+		lblCurrentBalance.setForeground(new Color(0, 78, 168));
 		lblCurrentBalance.setFont(new Font("Tahoma", Font.BOLD, 30));
 		lblCurrentBalance.setBounds(307, 1, 245, 80);
 		frame.getContentPane().add(lblCurrentBalance);
 		
 		JButton btnNewButton_1 = new JButton("Home");
+		btnNewButton_1.setBackground(new Color(252, 183, 21));
+		btnNewButton_1.setForeground(new Color(0, 78, 168));
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnNewButton_1.setBounds(58, 33, 89, 23);
 		frame.getContentPane().add(btnNewButton_1);

@@ -45,6 +45,8 @@ public class Deposit extends JFrame {
      * Create the application.
      */
     public Deposit() {
+    	getContentPane().setBackground(new Color(252, 183, 21));
+    	getContentPane().setForeground(new Color(252, 183, 21));
         initialize();
     }
 
@@ -60,12 +62,14 @@ public class Deposit extends JFrame {
 
         // Welcome label
         JLabel lblDeposit = new JLabel("Deposit");
+        lblDeposit.setForeground(new Color(0, 78, 168));
         lblDeposit.setFont(new Font("Tahoma", Font.BOLD, 30));
         lblDeposit.setBounds(372, 39, 115, 80);
         getContentPane().add(lblDeposit);
 
         // Potsdam Bank welcome label
         JLabel lblNewLabel_4 = new JLabel("Welcome to PotsBank");
+        lblNewLabel_4.setForeground(new Color(0, 78, 168));
         lblNewLabel_4.setFont(new Font("Tahoma", Font.ITALIC, 30));
         lblNewLabel_4.setBounds(287, 0, 294, 64);
         getContentPane().add(lblNewLabel_4);
@@ -73,7 +77,7 @@ public class Deposit extends JFrame {
         // Panel for deposit functionality
         panel = new JPanel();
         panel.setLayout(null);
-        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setBackground(new Color(0, 78, 168));
         panel.setBounds(270, 180, 320, 140);
         getContentPane().add(panel);
 
@@ -85,18 +89,23 @@ public class Deposit extends JFrame {
 
         // Label for entering amount
         lblEnterTheAmount_1 = new JLabel("Enter the Amount to Deposit");
+        lblEnterTheAmount_1.setForeground(new Color(230, 245, 254));
+        lblEnterTheAmount_1.setBackground(new Color(230, 245, 254));
         lblEnterTheAmount_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
         lblEnterTheAmount_1.setBounds(66, 28, 187, 19);
         panel.add(lblEnterTheAmount_1);
 
         // Button to confirm the deposit
         btnNewButton = new JButton("Enter");
+        btnNewButton.setForeground(new Color(0, 0, 0));
         btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnNewButton.setBounds(115, 101, 89, 23);
         panel.add(btnNewButton);
 
         // "Home" button to go back to the home screen
         btnNewButton_1 = new JButton("Home");
+        btnNewButton_1.setForeground(new Color(0, 78, 168));
+        btnNewButton_1.setBackground(new Color(0, 78, 168));
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Home home = new Home();
