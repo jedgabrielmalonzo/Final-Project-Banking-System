@@ -122,9 +122,9 @@ public class Login {
                                                         JLabel lblWelcome = new JLabel("Welcome to PotsBank");
                                                         lblWelcome.setForeground(new Color(255, 255, 255));
                                                         lblWelcome.setBackground(new Color(255, 255, 255));
-                                                        lblWelcome.setBounds(46, 199, 256, 31);
+                                                        lblWelcome.setBounds(10, 198, 302, 31);
                                                         panel.add(lblWelcome);
-                                                        lblWelcome.setFont(new Font("SansSerif", Font.PLAIN, 23));
+                                                        lblWelcome.setFont(new Font("Tahoma", Font.ITALIC, 30));
                                                 
                                                 JButton btnCancel = new JButton("Cancel\r\n");
                                                 btnCancel.setBackground(new Color(252, 183, 21));
