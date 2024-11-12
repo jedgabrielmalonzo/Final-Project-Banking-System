@@ -1,4 +1,4 @@
-package GUI;
+package CheckBalanceGUI;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -46,7 +46,7 @@ public class Check_Balance {
         frmCheckBalance.getContentPane().setLayout(null);
 
         JButton btnCheckBalance = new JButton("Check Current Balance");
-        btnCheckBalance.setBackground(new Color(252, 183, 21));
+        btnCheckBalance.setBackground(Color.WHITE);
         btnCheckBalance.setForeground(new Color(0, 78, 168));
         btnCheckBalance.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -54,34 +54,45 @@ public class Check_Balance {
             }
         });
         btnCheckBalance.setFont(new Font("Tahoma", Font.BOLD, 17));
-        btnCheckBalance.setBounds(271, 203, 311, 78);
+        btnCheckBalance.setBounds(495, 252, 311, 78);
         frmCheckBalance.getContentPane().add(btnCheckBalance);
 
         JButton btnBankStatement = new JButton("Check Bank Statement");
         btnBankStatement.setForeground(new Color(0, 78, 168));
-        btnBankStatement.setBackground(new Color(252, 183, 21));
+        btnBankStatement.setBackground(Color.WHITE);
         btnBankStatement.setFont(new Font("Tahoma", Font.BOLD, 17));
-        btnBankStatement.setBounds(271, 330, 311, 78);
+        btnBankStatement.setBounds(76, 252, 311, 78);
         frmCheckBalance.getContentPane().add(btnBankStatement);
-        
+        btnBankStatement.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                checkPin();
+            }
+        });
 
         JLabel lblCheckBalance = new JLabel("Check Balance");
-        lblCheckBalance.setForeground(new Color(255, 255, 255));
-        lblCheckBalance.setFont(new Font("Tahoma", Font.BOLD, 30));
-        lblCheckBalance.setBounds(319, 23, 221, 78);
+        lblCheckBalance.setForeground(new Color(0,78,168));
+        lblCheckBalance.setFont(new Font("Tahoma", Font.BOLD, 40));
+        lblCheckBalance.setBounds(284, 115, 292, 78);
         frmCheckBalance.getContentPane().add(lblCheckBalance);
 
         JButton btnHome = new JButton("Home");
-        btnHome.setBackground(new Color(252, 183, 21));
+        btnHome.setBackground(Color.WHITE);
         btnHome.setForeground(new Color(0, 78, 168));
         btnHome.setFont(new Font("Tahoma", Font.BOLD, 12));
         btnHome.setBounds(10, 23, 89, 23);
         frmCheckBalance.getContentPane().add(btnHome);
         
-        JPanel panel = new JPanel();
-        panel.setBackground(new Color(0, 78, 168));
-        panel.setBounds(267, 23, 315, 78);
-        frmCheckBalance.getContentPane().add(panel);
+        JLabel lblNewLabel = new JLabel("Welcome to PotsBank");
+        lblNewLabel.setForeground(new Color(0,78,168));
+        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
+        lblNewLabel.setBounds(264, 23, 331, 37);
+        frmCheckBalance.getContentPane().add(lblNewLabel);
+        
+        JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
+        lblNewLabel_1.setForeground(new Color(252, 183, 21));
+        lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 16));
+        lblNewLabel_1.setBounds(320, 57, 219, 35);
+        frmCheckBalance.getContentPane().add(lblNewLabel_1);
     }
 
     private void checkPin() {

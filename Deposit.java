@@ -1,4 +1,4 @@
-package GUI;
+package DepositGUI;
 
 
 import java.awt.EventQueue;
@@ -24,6 +24,8 @@ public class Deposit extends JFrame {
     private JLabel lblEnterTheAmount_1;
     private JButton btnNewButton;
     private JButton btnNewButton_1;
+    private JLabel lblNewLabel_1;
+    private JLabel lblEnterTheAmount;
 
     /**
      * Launch the application.
@@ -45,7 +47,7 @@ public class Deposit extends JFrame {
      * Create the application.
      */
     public Deposit() {
-    	getContentPane().setBackground(new Color(252, 183, 21));
+    	getContentPane().setBackground(new Color(230,245,255));
     	getContentPane().setForeground(new Color(252, 183, 21));
         initialize();
     }
@@ -63,22 +65,15 @@ public class Deposit extends JFrame {
         // Welcome label
         JLabel lblDeposit = new JLabel("Deposit");
         lblDeposit.setForeground(new Color(0, 78, 168));
-        lblDeposit.setFont(new Font("Tahoma", Font.BOLD, 30));
-        lblDeposit.setBounds(372, 39, 115, 80);
+        lblDeposit.setFont(new Font("Tahoma", Font.BOLD, 50));
+        lblDeposit.setBounds(135, 90, 192, 80);
         getContentPane().add(lblDeposit);
-
-        // Potsdam Bank welcome label
-        JLabel lblNewLabel_4 = new JLabel("Welcome to PotsBank");
-        lblNewLabel_4.setForeground(new Color(0, 78, 168));
-        lblNewLabel_4.setFont(new Font("Tahoma", Font.ITALIC, 30));
-        lblNewLabel_4.setBounds(287, 0, 294, 64);
-        getContentPane().add(lblNewLabel_4);
 
         // Panel for deposit functionality
         panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(new Color(0, 78, 168));
-        panel.setBounds(270, 180, 320, 140);
+        panel.setBounds(70, 205, 320, 140);
         getContentPane().add(panel);
 
         // TextField for deposit amount
@@ -97,7 +92,7 @@ public class Deposit extends JFrame {
 
         // Button to confirm the deposit
         btnNewButton = new JButton("Enter");
-        btnNewButton.setForeground(new Color(0, 0, 0));
+        btnNewButton.setForeground(new Color(0,78,168));
         btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
         btnNewButton.setBounds(115, 101, 89, 23);
         panel.add(btnNewButton);
@@ -105,7 +100,7 @@ public class Deposit extends JFrame {
         // "Home" button to go back to the home screen
         btnNewButton_1 = new JButton("Home");
         btnNewButton_1.setForeground(new Color(0, 78, 168));
-        btnNewButton_1.setBackground(new Color(0, 78, 168));
+        btnNewButton_1.setBackground(Color.WHITE);
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Home home = new Home();
@@ -116,5 +111,31 @@ public class Deposit extends JFrame {
         btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
         btnNewButton_1.setBounds(10, 11, 89, 23);
         getContentPane().add(btnNewButton_1);
+        
+        JPanel panel_1 = new JPanel();
+        panel_1.setBackground(new Color(0,78,168));
+        panel_1.setBounds(460, 0, 400, 501);
+        getContentPane().add(panel_1);
+        panel_1.setLayout(null);
+        
+        JLabel lblNewLabel = new JLabel("Welcome to PotsBank");
+        lblNewLabel.setBounds(39, 77, 331, 37);
+        panel_1.add(lblNewLabel);
+        lblNewLabel.setForeground(new Color(230,245,255));
+        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
+        
+        lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
+        lblNewLabel_1.setForeground(new Color(252, 183, 21));
+        lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 16));
+        lblNewLabel_1.setBounds(105, 115, 219, 35);
+        panel_1.add(lblNewLabel_1);
+        
+        lblEnterTheAmount = new JLabel("<html>To complete your deposit, simply enter the amount you wish to deposit and confirm.<br>Once submitted, you'll receive a confirmation message.</html>");
+        lblEnterTheAmount.setForeground(new Color(230, 245, 254));
+        lblEnterTheAmount.setFont(new Font("Tahoma", Font.PLAIN, 15));
+        lblEnterTheAmount.setBackground(new Color(230, 245, 254));
+        lblEnterTheAmount.setBounds(29, 208, 342, 84); 
+        panel_1.add(lblEnterTheAmount);
+
     }
 }

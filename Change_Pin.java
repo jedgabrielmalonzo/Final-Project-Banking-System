@@ -1,4 +1,4 @@
-package GUI;
+package ChangePinGui;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -41,10 +41,10 @@ public class Change_Pin extends JFrame {
 
 	public Change_Pin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 883, 641);
+		setBounds(100, 100, 880, 641);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(230, 245, 255));
-		contentPane.setBackground(new Color(252, 183, 21));
+		contentPane.setBackground(new Color(230,245,255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -68,10 +68,10 @@ public class Change_Pin extends JFrame {
 		textField_2.setBounds(327, 360, 260, 38);
 		contentPane.add(textField_2);
 		
-		JLabel lblNewLabel = new JLabel("CHANGE PIN*");
+		JLabel lblNewLabel = new JLabel("CHANGE PIN");
 		lblNewLabel.setForeground(new Color(0, 78, 168));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblNewLabel.setBounds(372, 77, 177, 60);
+		lblNewLabel.setBounds(373, 77, 160, 60);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Current Pin:");

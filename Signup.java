@@ -48,64 +48,66 @@ public class Signup {
         frmSignup = new JFrame();
         frmSignup.getContentPane().setBackground(new Color(229, 245, 255));
         frmSignup.setTitle("Signup\r\n");
-        frmSignup.setBounds(100, 100, 705, 467);
+        frmSignup.setBounds(100, 100, 800, 530);
         frmSignup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmSignup.getContentPane().setLayout(null);
 
         JLabel lblTitle = new JLabel("SIGNUP");
-        lblTitle.setForeground(new Color(0, 78, 168));
+        lblTitle.setBackground(new Color(204, 51, 51));
+        lblTitle.setForeground(new Color(0,78,168));
         lblTitle.setFont(new Font("Tahoma", Font.BOLD, 30));
-        lblTitle.setBounds(456, 24, 128, 80);
+        lblTitle.setBounds(535, 21, 128, 80);
         frmSignup.getContentPane().add(lblTitle);
         
         String[] accountTypes = {"Savings", "Checking"};
         
                 JLabel lblUsername = new JLabel("User ID");
                 lblUsername.setForeground(new Color(0, 0, 0));
-                lblUsername.setBounds(375, 99, 67, 25);
+                lblUsername.setBounds(427, 88, 67, 25);
                 frmSignup.getContentPane().add(lblUsername);
                 lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 20));
                 
                         textFieldUsername = new JTextField();
-                        textFieldUsername.setBounds(375, 130, 268, 20);
+                        textFieldUsername.setBounds(426, 124, 320, 20);
                         frmSignup.getContentPane().add(textFieldUsername);
                         textFieldUsername.setColumns(10);
                         
                                 passwordField = new JPasswordField();
-                                passwordField.setBounds(375, 190, 268, 20);
+                                passwordField.setBounds(426, 185, 320, 20);
                                 frmSignup.getContentPane().add(passwordField);
                                 
                                         confirmPasswordField = new JPasswordField();
-                                        confirmPasswordField.setBounds(375, 250, 268, 20);
+                                        confirmPasswordField.setBounds(426, 256, 320, 20);
                                         frmSignup.getContentPane().add(confirmPasswordField);
                                         
                                                 JLabel lblPassword = new JLabel("Password");
                                                 lblPassword.setForeground(new Color(0, 0, 0));
-                                                lblPassword.setBounds(375, 155, 89, 31);
+                                                lblPassword.setBounds(423, 155, 89, 31);
                                                 frmSignup.getContentPane().add(lblPassword);
                                                 lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
                                                 
                                                         JLabel lblConfirmPassword = new JLabel("Confirm Password");
                                                         lblConfirmPassword.setForeground(new Color(0, 0, 0));
-                                                        lblConfirmPassword.setBounds(375, 220, 159, 25);
+                                                        lblConfirmPassword.setBounds(424, 220, 159, 25);
                                                         frmSignup.getContentPane().add(lblConfirmPassword);
                                                         lblConfirmPassword.setFont(new Font("Tahoma", Font.PLAIN, 20));
                                                         
                                                         JLabel lblAccountType = new JLabel("Account Type");
                                                         lblAccountType.setForeground(new Color(0, 0, 0));
-                                                        lblAccountType.setBounds(375, 275, 137, 25);
+                                                        lblAccountType.setBounds(427, 284, 137, 25);
                                                         frmSignup.getContentPane().add(lblAccountType);
                                                         lblAccountType.setFont(new Font("Tahoma", Font.PLAIN, 20));
                                                         JComboBox<String> comboAccountType = new JComboBox<>(accountTypes);
-                                                        comboAccountType.setBackground(new Color(245, 185, 19));
+                                                        comboAccountType.setBackground(Color.WHITE);
                                                         comboAccountType.setForeground(new Color(0, 0, 0));
-                                                        comboAccountType.setBounds(375, 305, 268, 31);
+                                                        comboAccountType.setBounds(426, 320, 320, 31);
                                                         frmSignup.getContentPane().add(comboAccountType);
                                                         comboAccountType.setFont(new Font("Tahoma", Font.BOLD, 11));
                                                         
                                                                 JButton btnSubmit = new JButton("Signup");
-                                                                btnSubmit.setBackground(new Color(245, 185, 19));
-                                                                btnSubmit.setBounds(405, 351, 89, 23);
+                                                                btnSubmit.setForeground(new Color(0,78,168));
+                                                                btnSubmit.setBackground(Color.WHITE);
+                                                                btnSubmit.setBounds(475, 374, 89, 23);
                                                                 frmSignup.getContentPane().add(btnSubmit);
                                                                 btnSubmit.addActionListener(new ActionListener() {
                                                                     public void actionPerformed(ActionEvent e) {
@@ -137,40 +139,59 @@ public class Signup {
                                                                 });
                                                                 btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 15));
                                                                 
-                                                                JPanel panel = new JPanel();
-                                                                panel.setLayout(null);
-                                                                panel.setBackground(new Color(0, 78, 168));
-                                                                panel.setBounds(0, 0, 312, 428);
-                                                                frmSignup.getContentPane().add(panel);
-                                                                
-                                                                JLabel lblWelcome_1 = new JLabel("Welcome to PotsBank");
-                                                                lblWelcome_1.setForeground(new Color(255, 255, 255));
-                                                                lblWelcome_1.setBackground(new Color(255, 255, 255));
-                                                                lblWelcome_1.setFont(new Font("Tahoma", Font.ITALIC, 30));
-                                                                lblWelcome_1.setBounds(10, 197, 301, 31);
-                                                                panel.add(lblWelcome_1);
-                                                                
                                                                 JButton btnCancel = new JButton("Cancel\r\n");
-                                                                btnCancel.setBackground(new Color(245, 185, 19));
+                                                                btnCancel.setForeground(new Color(0,78,168));
+                                                                btnCancel.addActionListener(new ActionListener() {
+                                                                	public void actionPerformed(ActionEvent e) {
+                                                                	}
+                                                                });
+                                                                btnCancel.setBackground(Color.WHITE);
                                                                 btnCancel.setFont(new Font("Tahoma", Font.BOLD, 15));
-                                                                btnCancel.setBounds(521, 351, 89, 23);
+                                                                btnCancel.setBounds(603, 374, 89, 23);
                                                                 frmSignup.getContentPane().add(btnCancel);
                                                                 
                                                                 JLabel lblAlreadyHaveAn = new JLabel("Already have an account?");
                                                                 lblAlreadyHaveAn.setForeground(new Color(0, 78, 168));
                                                                 lblAlreadyHaveAn.setBackground(new Color(0, 78, 168));
                                                                 lblAlreadyHaveAn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-                                                                lblAlreadyHaveAn.setBounds(390, 396, 147, 20);
+                                                                lblAlreadyHaveAn.setBounds(455, 423, 147, 20);
                                                                 frmSignup.getContentPane().add(lblAlreadyHaveAn);
                                                                 
                                                                 JButton btnLogin = new JButton("Login");
-                                                                btnLogin.setBackground(new Color(245, 185, 19));
+                                                                btnLogin.setFont(new Font("Tahoma", Font.BOLD, 15));
+                                                                btnLogin.setForeground(new Color(0,78,168));
+                                                                btnLogin.setBackground(Color.WHITE);
                                                                 btnLogin.addActionListener(new ActionListener() {
                                                                 	public void actionPerformed(ActionEvent e) {
                                                                 	}
                                                                 });
-                                                                btnLogin.setBounds(535, 396, 89, 23);
+                                                                btnLogin.setBounds(603, 421, 89, 23);
                                                                 frmSignup.getContentPane().add(btnLogin);
+                                                                
+                                                                JPanel panel = new JPanel();
+                                                                panel.setLayout(null);
+                                                                panel.setBackground(new Color(0, 78, 168));
+                                                                panel.setBounds(0, 0, 391, 491);
+                                                                frmSignup.getContentPane().add(panel);
+                                                                
+                                                                JLabel lblNewLabel_1 = new JLabel("Welcome to PotsBank");
+                                                                lblNewLabel_1.setForeground(new Color(230, 245, 255));
+                                                                lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 30));
+                                                                lblNewLabel_1.setBounds(28, 64, 335, 64);
+                                                                panel.add(lblNewLabel_1);
+                                                                
+                                                                JLabel lblNewLabel_1_1 = new JLabel("Your Trust, Our Commitment");
+                                                                lblNewLabel_1_1.setForeground(new Color(252, 183, 21));
+                                                                lblNewLabel_1_1.setFont(new Font("Tahoma", Font.ITALIC, 16));
+                                                                lblNewLabel_1_1.setBounds(86, 125, 219, 35);
+                                                                panel.add(lblNewLabel_1_1);
+                                                                
+                                                                JLabel lblsignUpTo = new JLabel("<html>Sign up to create your online bank account and enjoy secure access to manage your finances, check balances, transfer funds, and more convenient banking at your fingertips.</html>");
+                                                                lblsignUpTo.setForeground(new Color(230, 245, 254));
+                                                                lblsignUpTo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+                                                                lblsignUpTo.setBackground(new Color(230, 245, 254));
+                                                                lblsignUpTo.setBounds(38, 222, 314, 84);
+                                                                panel.add(lblsignUpTo);
     }
 
     public void setVisible(boolean visible) {

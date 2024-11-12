@@ -58,7 +58,7 @@ public class Bank {
 		JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
 		lblNewLabel_1.setForeground(new Color(252, 183, 21));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 16));
-		lblNewLabel_1.setBounds(327, 124, 197, 35);
+		lblNewLabel_1.setBounds(320, 124, 219, 35);
 		frmWelcomeToPotsdam.getContentPane().add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("Login\r\n");
@@ -70,7 +70,7 @@ public class Bank {
 				frmWelcomeToPotsdam.dispose(); 
 			}
 		});
-		btnNewButton.setBackground(new Color(252, 183, 21));
+		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnNewButton.setBounds(139, 238, 198, 70);
 		frmWelcomeToPotsdam.getContentPane().add(btnNewButton);
@@ -85,7 +85,7 @@ public class Bank {
 			}
 		});
 		btnSignup.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnSignup.setBackground(new Color(252, 183, 21));
+		btnSignup.setBackground(Color.WHITE);
 		btnSignup.setBounds(484, 240, 198, 70);
 		frmWelcomeToPotsdam.getContentPane().add(btnSignup);
 	}

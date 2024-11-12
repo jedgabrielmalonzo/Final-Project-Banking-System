@@ -1,4 +1,4 @@
-package GUI;
+package CheckBalanceGUI;
 
 import java.awt.EventQueue;
 
@@ -58,7 +58,7 @@ public class CurrentBalance {
 		frame.getContentPane().add(lblCurrentBalance);
 		
 		JButton btnNewButton_1 = new JButton("Home");
-		btnNewButton_1.setBackground(new Color(252, 183, 21));
+		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.setForeground(new Color(0, 78, 168));
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnNewButton_1.setBounds(58, 33, 89, 23);

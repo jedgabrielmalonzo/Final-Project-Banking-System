@@ -98,23 +98,39 @@ public class Home extends JFrame {
         
         JPanel panel = new JPanel();
         panel.setBackground(new Color(0, 78, 168));
-        panel.setBounds(0, 0, 345, 501);
+        panel.setBounds(0, 0, 363, 501);
         getContentPane().add(panel);
         panel.setLayout(null);
                 
-                JLabel lblNewLabel_2_1 = new JLabel("What would you ");
-                lblNewLabel_2_1.setHorizontalAlignment(SwingConstants.CENTER);
-                lblNewLabel_2_1.setForeground(Color.WHITE);
-                lblNewLabel_2_1.setFont(new Font("Tahoma", Font.BOLD, 30));
-                lblNewLabel_2_1.setBounds(39, 220, 283, 60);
-                panel.add(lblNewLabel_2_1);
-                
-                JLabel lblNewLabel_2_1_1 = new JLabel("like to do?");
+                JLabel lblNewLabel_2_1_1 = new JLabel("<html>What would you</html>");
                 lblNewLabel_2_1_1.setHorizontalAlignment(SwingConstants.CENTER);
                 lblNewLabel_2_1_1.setForeground(Color.WHITE);
-                lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 30));
-                lblNewLabel_2_1_1.setBounds(75, 255, 195, 60);
+                lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 35));
+                lblNewLabel_2_1_1.setBounds(33, 11, 298, 107);
                 panel.add(lblNewLabel_2_1_1);
+                
+                JLabel lblNewLabel_2_1_1_1 = new JLabel("<html>like to do?</html>");
+                lblNewLabel_2_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+                lblNewLabel_2_1_1_1.setForeground(Color.WHITE);
+                lblNewLabel_2_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 35));
+                lblNewLabel_2_1_1_1.setBounds(33, 65, 298, 107);
+                panel.add(lblNewLabel_2_1_1_1);
+                
+                JLabel lblNewLabel_2_1_1_2 = new JLabel("<html>Choose an action from the options on the right to manage your account:<br><br>"
+                        + "Deposit: Add money to your account securely.<br>"
+                		+ "<br>"
+                        + "Withdraw: Withdraw funds from your account.<br>"
+                        + "<br>"
+                        + "Check Balance: View your current account balance.<br>"
+                        + "<br>"
+                        + "Change Pin: Update your PIN for added security.<br>"
+                        + "<br>"
+                        + "Create Account: Register a new account with PotsBank.</html>");
+                lblNewLabel_2_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+                lblNewLabel_2_1_1_2.setForeground(Color.WHITE);
+                lblNewLabel_2_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 13));
+                lblNewLabel_2_1_1_2.setBounds(53, 153, 256, 306);
+                panel.add(lblNewLabel_2_1_1_2);
         
         JButton btnChangePin = new JButton("Change Pin");
         btnChangePin.setBackground(new Color(252, 183, 21));
@@ -136,7 +152,7 @@ public class Home extends JFrame {
                 JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
                 lblNewLabel_1.setBounds(505, 62, 197, 35);
                 getContentPane().add(lblNewLabel_1);
-                lblNewLabel_1.setForeground(new Color(0, 78, 168));
+                lblNewLabel_1.setForeground(new Color(245,185,19));
                 lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 15));
                 
                 JButton btnCreateAccount = new JButton("Create Account");

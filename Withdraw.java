@@ -1,4 +1,4 @@
-package GUI;
+package WithdrawGUI;
 
 import java.awt.EventQueue;
 
@@ -58,20 +58,9 @@ public class Withdraw {
 		frmWithdraw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWithdraw.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel_4 = new JLabel("Welcome to PotsBank");
-		lblNewLabel_4.setForeground(new Color(255, 255, 255));
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.ITALIC, 30));
-		lblNewLabel_4.setBounds(283, 0, 293, 64);
-		frmWithdraw.getContentPane().add(lblNewLabel_4);
-		
-		JLabel lblWithdraw = new JLabel("Withdraw");
-		lblWithdraw.setFont(new Font("Tahoma", Font.BOLD, 30));
-		lblWithdraw.setBounds(356, 39, 148, 80);
-		frmWithdraw.getContentPane().add(lblWithdraw);
-		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(245, 185, 19));
-		panel.setBounds(270, 180, 320, 140);
+		panel.setBackground(new Color(0,78,168));
+		panel.setBounds(70, 205, 320, 140);
 		frmWithdraw.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -82,7 +71,7 @@ public class Withdraw {
 		textField.setColumns(10);
 		
 		JLabel lblEnterTheAmount = new JLabel("Enter the Amount to Withdraw");
-		lblEnterTheAmount.setForeground(new Color(0, 78, 168));
+		lblEnterTheAmount.setForeground(new Color(230,245,255));
 		lblEnterTheAmount.setBounds(60, 28, 199, 19);
 		panel.add(lblEnterTheAmount);
 		lblEnterTheAmount.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -94,6 +83,8 @@ public class Withdraw {
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Home");
+		btnNewButton_1.setForeground(new Color(0,78,168));
+		btnNewButton_1.setBackground(Color.WHITE);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 		        Home home = new Home();
@@ -105,9 +96,35 @@ public class Withdraw {
 		btnNewButton_1.setBounds(10, 11, 89, 23);
 		frmWithdraw.getContentPane().add(btnNewButton_1);
 		
+		JLabel lblWithdraw = new JLabel("Withdraw\r\n");
+		lblWithdraw.setForeground(new Color(0, 78, 168));
+		lblWithdraw.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblWithdraw.setBounds(114, 90, 246, 80);
+		frmWithdraw.getContentPane().add(lblWithdraw);
+		
 		JPanel panel_1 = new JPanel();
+		panel_1.setLayout(null);
 		panel_1.setBackground(new Color(0, 78, 168));
-		panel_1.setBounds(0, 0, 860, 119);
+		panel_1.setBounds(460, 0, 400, 501);
 		frmWithdraw.getContentPane().add(panel_1);
+		
+		JLabel lblNewLabel = new JLabel("Welcome to PotsBank");
+		lblNewLabel.setForeground(new Color(230, 245, 255));
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel.setBounds(39, 77, 331, 37);
+		panel_1.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Your Trust, Our Commitment");
+		lblNewLabel_1.setForeground(new Color(252, 183, 21));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 16));
+		lblNewLabel_1.setBounds(90, 115, 219, 35);
+		panel_1.add(lblNewLabel_1);
+		
+		JLabel lblEnterTheAmount_1 = new JLabel("<html>To complete your deposit, simply enter the amount you wish to deposit and confirm.<br>Once submitted, you'll receive a confirmation message.</html>");
+		lblEnterTheAmount_1.setForeground(new Color(230, 245, 254));
+		lblEnterTheAmount_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblEnterTheAmount_1.setBackground(new Color(230, 245, 254));
+		lblEnterTheAmount_1.setBounds(29, 208, 342, 84);
+		panel_1.add(lblEnterTheAmount_1);
 	}
 }
