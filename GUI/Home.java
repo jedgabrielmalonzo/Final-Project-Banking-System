@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import ChangePinGui.Change_Pin;
 import CheckBalanceGUI.Check_Balance;
 import DepositGUI.Deposit;
 import WithdrawGUI.Withdraw;
@@ -89,7 +90,8 @@ public class Home extends JFrame {
         btnChangePin.setBackground(new Color(252, 183, 21));
         btnChangePin.setForeground(new Color(0, 78, 168));
         btnChangePin.addActionListener(e -> {
-            // Handle Change Pin action
+        	Change_Pin.main(new String[0]);  
+            dispose();
         });
         btnChangePin.setFont(new Font("Tahoma", Font.BOLD, 15));
         btnChangePin.setBounds(498, 379, 204, 54);
