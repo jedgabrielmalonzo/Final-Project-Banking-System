@@ -12,14 +12,14 @@ import java.sql.SQLException;
 
 import GUI.Home;
 import Signup.UserSession;
-import Signup.signup_database; 
+import Signup.signup_database;
 
 public class Change_Pin extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
-    private JTextField textFieldNewPin;
-    private JTextField textFieldConfirmNewPin;
+    private JPasswordField textFieldNewPin;  // Changed to JPasswordField
+    private JPasswordField textFieldConfirmNewPin;  // Changed to JPasswordField
     private JLabel lblConfirmNewPin;
     private JPanel panel;
     private JLabel lblpleaseEnterYour;
@@ -48,15 +48,13 @@ public class Change_Pin extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        textFieldNewPin = new JTextField();
+        textFieldNewPin = new JPasswordField();  // Changed to JPasswordField
         textFieldNewPin.setToolTipText("Enter New Pin");
-        textFieldNewPin.setColumns(10);
         textFieldNewPin.setBounds(106, 186, 260, 38);
         contentPane.add(textFieldNewPin);
 
-        textFieldConfirmNewPin = new JTextField();
+        textFieldConfirmNewPin = new JPasswordField();  // Changed to JPasswordField
         textFieldConfirmNewPin.setToolTipText("Confirm your pin");
-        textFieldConfirmNewPin.setColumns(10);
         textFieldConfirmNewPin.setBounds(106, 285, 260, 38);
         contentPane.add(textFieldConfirmNewPin);
 
@@ -122,8 +120,10 @@ public class Change_Pin extends JFrame {
         });
 
         btnUpdate.addActionListener(e -> {
-            String newPin = textFieldNewPin.getText();
-            String confirmNewPin = textFieldConfirmNewPin.getText();
+            char[] newPinCharArray = textFieldNewPin.getPassword();  // Use char[] for password input
+            char[] confirmNewPinCharArray = textFieldConfirmNewPin.getPassword();  // Use char[] for password input
+            String newPin = new String(newPinCharArray);
+            String confirmNewPin = new String(confirmNewPinCharArray);
 
             // Validation checks
             if (newPin.isEmpty() || confirmNewPin.isEmpty()) {

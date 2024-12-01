@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import ChangePinGui.Change_Pin;
-import CheckBalanceGUI.Account_Statement;
+import CheckBalanceGUI.CheckBalance;
 import DepositGUI.Deposit;
 import Signup.UserSession;
 import WithdrawGUI.Withdraw;
@@ -58,7 +58,7 @@ public class Home extends JFrame {
     	    btnWithdraw.setBounds(498, 239, 204, 54);
     	    getContentPane().add(btnWithdraw);
 
-    	    JButton btnCheckBalance = createButton("Check Balance", e -> verifyPinAndOpenWindow(Account_Statement.class));
+    	    JButton btnCheckBalance = createButton("Check Balance", e -> verifyPinAndOpenWindow(CheckBalance.class));
     	    btnCheckBalance.setBounds(498, 314, 204, 54);
     	    getContentPane().add(btnCheckBalance);
 
